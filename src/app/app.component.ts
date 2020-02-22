@@ -12,7 +12,7 @@ export class AppComponent {
     const date = new Date();
     setTimeout(() => {
       resolve(date);
-    }, 2000)
+    }, 2000);
   });
 
   appareils = [{
@@ -28,8 +28,8 @@ export class AppComponent {
       status: 'éteint'
     }
   ];
-  
-  constructor () {
+
+  constructor() {
     setTimeout(
       () => {
         this.isAuth = true;
