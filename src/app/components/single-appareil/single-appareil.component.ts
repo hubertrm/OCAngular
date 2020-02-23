@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppareilService } from 'src/app/services/appareil.service';
 import { ActivatedRoute } from '@angular/router';
+import { Appareil } from 'src/app/models/appareil.model';
 
 @Component({
   selector: 'app-single-appareil',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SingleAppareilComponent implements OnInit {
 
-  appareil: { id: number, name: string, status: string };
+  appareil: Appareil;
 
   constructor(private appareilService: AppareilService,
               private route: ActivatedRoute) { }
