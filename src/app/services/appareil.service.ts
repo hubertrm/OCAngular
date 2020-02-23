@@ -16,6 +16,15 @@ export class AppareilService {
     new Appareil(3, 'Ordinateur', AppareilStatus.turnedOff)
   ];
 
+  addAppareil(name: string, status: AppareilStatus) {
+    const appareilObject = new Appareil(0, '', AppareilStatus.turnedOff);
+    appareilObject.name = name;
+    appareilObject.status = status;
+    appareilObject.id = this.appareils.length;
+    this.appareils.push(appareilObject);
+    this.emitAppareilSubject();
+  }
+
   getAppareilById(id: number) {
     return this.appareils.find(result => {
       return result.id === id;
